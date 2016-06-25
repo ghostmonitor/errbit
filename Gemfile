@@ -28,6 +28,11 @@ gem 'useragent'
 gem 'foreman'
 gem 'bigdecimal' 
 
+
+
+gem 'errbit_jira_plugin', :git => 'git://github.com/launchpadrecruits/errbit_jira_plugin', :branch => 'bugfix-params'
+
+
 # Please don't update hoptoad_notifier to airbrake.
 # It's for internal use only, and we monkeypatch certain methods
 gem 'hoptoad_notifier', "~> 2.4"

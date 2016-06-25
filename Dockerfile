@@ -13,6 +13,7 @@ RUN apk --update add \
   bash \
   nodejs \
   tzdata \
+  git \
   ruby-dev && \
   rm -fr /usr/share/ri
 COPY . /app
