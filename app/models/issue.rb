@@ -59,7 +59,11 @@ class Issue
     tracker.errors.each { |k, err| errors.add k, err }
     return false if errors.present?
 
-    url = issue_tracker.create_issue(title, body, environment, user: user.as_document)
+    if IssueTracker.new.type_tracker == 'none'
+      url = issue_tracker.create_issue(title, body, environment, user: user.as_document)
+    else
+      url = issue_tracker.create_issue(title, body, user: user.as_document)
+    end
     problem.update_attributes(issue_link: url, issue_type: tracker.class.label)
 
     errors.empty?

@@ -26,11 +26,11 @@ gem 'rack-ssl-enforcer', require: false
 gem 'rails_autolink'
 gem 'useragent'
 gem 'foreman'
-gem 'bigdecimal' 
+gem 'bigdecimal'
 
 
 
-gem 'errbit_jira_plugin', :git => 'git://github.com/launchpadrecruits/errbit_jira_plugin', :branch => 'bugfix-params'
+gem 'errbit_jira_plugin', :git => 'git://github.com/ghostmonitor/errbit_jira_plugin', :branch => 'master'
 
 
 # Please don't update hoptoad_notifier to airbrake.

@@ -1,7 +1,7 @@
 GIT
-  remote: git://github.com/launchpadrecruits/errbit_jira_plugin
-  revision: 68146171496ad4addfa1602089b8d5ae498f78b4
-  branch: bugfix-params
+  remote: git://github.com/ghostmonitor/errbit_jira_plugin
+  revision: 803f3f061f143dd20638e1d104733211d80d3312
+  branch: master
   specs:
     errbit_jira_plugin (0.3.0)
       errbit_plugin
@@ -202,7 +202,7 @@ GEM
     mime-types (2.99.1)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     mongo (2.2.1)
       bson (~> 4.0)
     mongoid (5.0.2)
