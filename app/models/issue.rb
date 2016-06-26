@@ -26,6 +26,14 @@ class Issue
     end
   end
 
+  def environment
+    if problem.respond_to?(:environment)
+      problem.environment
+    else
+      'unknown'
+    end
+  end
+
   def close
     errors.add :base, "This app has no issue tracker" unless issue_tracker
     return false if errors.present?
@@ -36,7 +44,7 @@ class Issue
     if issue_tracker.respond_to? :close_issue
       issue_tracker.close_issue(problem.issue_link, user: user.as_document)
     end
-    
+
     errors.empty?
   rescue => ex
     errors.add :base, "There was an error during issue closing: #{ex.message}"
@@ -51,7 +59,7 @@ class Issue
     tracker.errors.each { |k, err| errors.add k, err }
     return false if errors.present?
 
-    url = issue_tracker.create_issue(title, body, user: user.as_document)
+    url = issue_tracker.create_issue(title, body, environment, user: user.as_document)
     problem.update_attributes(issue_link: url, issue_type: tracker.class.label)
 
     errors.empty?
