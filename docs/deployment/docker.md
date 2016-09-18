@@ -10,7 +10,7 @@ cd errbit
 ```bash
 docker-compose build
 docker-compose up
-=======
+
 # Deploy with Docker
 
 Errbit provides official [Docker](https://www.docker.com/) images to

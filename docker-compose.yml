@@ -1,9 +1,6 @@
 errbit:
-<<<<<<< HEAD
   build: .
-=======
   image: errbit/errbit:latest
->>>>>>> 8024da5761a2cf069255957633e03dae129f8118
   ports:
     - "8080:8080"
   links:
